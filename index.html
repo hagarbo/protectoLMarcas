@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Configuración de la codificación de caracteres y título de la página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Enlace a fuentes externas de Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins"
+    />
+
+    <!-- Enlace a hojas de estilo locales para personalizar el diseño -->
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="stylesheet"
+      href="css/styles.css"
+      title="preferred"
+      type="text/css"
+    />
+    <script src="js/nba.js"></script>
+</head>
+
+<body>
+    <!-- Sección de cabecera de la página con logo y título -->
+    <header>
+        <!-- Enlace para volver a la página de inicio de sesión -->
+        <p><a href="login.html">Log In</a></p>
+        <div id="header-logo">
+          <!-- Logo de la página (imagen de la NBA) y título principal -->
+          <img src="img/nba.png" />
+          <h1>NBA Stats</h1>
+          <img src="img/nba.png" />
+        </div>
+    </header>
+
+    <!-- Barra de navegación con enlaces a las distintas páginas del sitio -->
+    <nav>
+        <div id="nav_menu" class="nav_bar"></div>
+            <ul>
+                <!-- Enlace a la página principal -->
+                <li><a href='index.html'>HOME</a></li>
+                <!-- Enlace a la página de equipos -->
+                <li><a href='team.html'>TEAMS</a></li>
+                <!-- Enlace a la página de clasificaciones -->
+                <li><a href='standings.html'>STANDINGS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal, logos de los equipos de la NBA -->
+    <div id='team-header'>
+        <div id='all-teams'>
+            <!-- Sección para la Conferencia Oeste -->
+            <div class='container west'>
+                <div id='west-header'>
+                    <img src='img/west.gif'>
+                </div>
+                <!-- Logos de la Conferencia Oeste -->
+                <div class='team-card' onclick=window.location=('team.html?team=Nuggets')>
+                    <img class='team-logo' src='img/Nuggets.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Mavericks')>
+                    <img class='team-logo' src='img/Mavericks.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Lakers')>
+                    <img class='team-logo' src='img/Lakers.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Kings')>
+                    <img class='team-logo' src='img/Kings.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Jazz')>
+                    <img class='team-logo' src='img/Jazz.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Hornets')>
+                    <img class='team-logo' src='img/Hornets.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Rockets')>
+                    <img class='team-logo' src='img/Rockets.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Spurs')>
+                    <img class='team-logo' src='img/Spurs.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Grizzlies')>
+                    <img class='team-logo' src='img/Grizzlies.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Clippers')>
+                    <img class='team-logo' src='img/Clippers.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Suns')>
+                    <img class='team-logo' src='img/Suns.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Supersonics')>
+                    <img class='team-logo' src='img/Supersonics.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Timberwolves')>
+                    <img class='team-logo' src='img/Timberwolves.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Trail Blazers')>
+                    <img class='team-logo' src='img/Trail Blazers.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Warriors')>
+                    <img class='team-logo' src='img/Warriors.gif'>
+                </div>
+            </div>
+
+            <!-- Sección para la Conferencia Este -->
+            <div class='container east'>
+                <div id='east-header'>
+                    <img src='img/east.gif'>
+                </div>
+                <!-- Logos de la Conferencia Este -->
+                <div class='team-card' onclick=window.location=('team.html?team=Pacers')>
+                    <img class='team-logo' src='img/Pacers.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Pistons')>
+                    <img class='team-logo' src='img/Pistons.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Raptors')>
+                    <img class='team-logo' src='img/Raptors.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=76ers')>
+                    <img class='team-logo' src='img/76ers.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Nets')>
+                    <img class='team-logo' src='img/Nets.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Bobcats')>
+                    <img class='team-logo' src='img/Bobcats.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Bucks')>
+                    <img class='team-logo' src='img/Bucks.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Bulls')>
+                    <img class='team-logo' src='img/Bulls.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Cavaliers')>
+                    <img class='team-logo' src='img/Cavaliers.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Celtics')>
+                    <img class='team-logo' src='img/Celtics.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Hawks')>
+                    <img class='team-logo' src='img/Hawks.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Heat')>
+                    <img class='team-logo' src='img/Heat.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Knicks')>
+                    <img class='team-logo' src='img/Knicks.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Magic')>
+                    <img class='team-logo' src='img/Magic.gif'>
+                </div>
+                <div class='team-card' onclick=window.location=('team.html?team=Wizards')>
+                    <img class='team-logo' src='img/Wizards.gif'>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página  -->
+    <footer>
+        <p>&copy; 2025 NBA Stats. All rights reserved.</p>
+        <p>
+          <a href="#" style="margin-right: 15px">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </p>
+        <p>
+          Our goal is to provide comprehensive and up-to-date NBA statistics and
+          insights for basketball enthusiasts.
+        </p>
+    </footer>
+</body>
+
+</html>

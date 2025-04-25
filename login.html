@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Configuración de la codificación de caracteres y título de la página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Enlace a fuentes externas de Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins"
+    />
+
+    <!-- Enlace a hojas de estilo locales para personalizar el diseño -->
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="stylesheet"
+      href="css/styles.css"
+      title="preferred"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- Sección de cabecera de la página con logo y título -->
+    <header>
+      <!-- Enlace para volver a la página de inicio de sesión -->
+      <p><a href="login.html">Log In</a></p>
+      <div id="header-logo">
+        <!-- Logo de la página (imagen de la NBA) y título principal -->
+        <img src="img/nba.png" />
+        <h1>NBA Stats</h1>
+        <img src="img/nba.png" />
+      </div>
+    </header>
+
+    <!-- Barra de navegación con enlaces a las distintas páginas del sitio -->
+    <nav>
+      <div id="nav_menu" class="nav_bar">
+        <ul>
+          <!-- Enlace a la página principal -->
+          <li><a href="index.html">HOME</a></li>
+          <!-- Enlace a la página de equipos -->
+          <li><a href="team.html">TEAMS</a></li>
+          <!-- Enlace a la página de clasificaciones -->
+          <li><a href="standings.html">STANDINGS</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenedor principal para el formulario de inicio de sesión -->
+    <div class="wrapper">
+      <h2>Login</h2>
+      <!-- Formulario para enviar las credenciales de inicio de sesión -->
+      <form action="/nba/login.html" method="post">
+        <!-- Campo para ingresar el nombre de usuario -->
+        <div class="form-group">
+          <label>User</label>
+          <input type="text" name="username" class="form-control" value="" />
+          <span class="help-block"></span>
+        </div>
+        <!-- Campo para ingresar la contraseña -->
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" name="password" class="form-control" />
+          <span class="help-block"></span>
+        </div>
+        <!-- Botón para enviar el formulario -->
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Log In" />
+        </div>
+      </form>
+    </div>
+
+    <!-- Pie de página  -->
+    <footer>
+      <p>&copy; 2025 NBA Stats. All rights reserved.</p>
+      <p>
+        <a href="#" style="margin-right: 15px">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </p>
+      <p>
+        Our goal is to provide comprehensive and up-to-date NBA statistics and
+        insights for basketball enthusiasts.
+      </p>
+    </footer>
+  </body>
+</html>

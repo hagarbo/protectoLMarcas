@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Enlace a fuentes externas de Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins"
+    />
+    <!-- Enlace a hojas de estilo locales para personalizar el diseño -->
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="stylesheet"
+      href="css/styles.css"
+      title="preferred"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/team.css" />
+    <script src="js/nba.js"></script>
+    <script
+      src="https://kit.fontawesome.com/616a10072c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Sección de cabecera de la página con logo y título -->
+    <header>
+      <!-- Enlace para volver a la página de inicio de sesión -->
+      <p><a href="login.html">Log In</a></p>
+      <div id="header-logo">
+        <!-- Logo de la página (imagen de la NBA) y título principal -->
+        <img src="img/nba.png" />
+        <h1>NBA Stats</h1>
+        <img src="img/nba.png" />
+      </div>
+    </header>
+    <!-- Barra de navegación con enlaces a las distintas páginas del sitio -->
+    <nav>
+      <div id="nav_menu" class="nav_bar"></div>
+          <ul>
+              <!-- Enlace a la página principal -->
+              <li><a href='index.html'>HOME</a></li>
+              <!-- Enlace a la página de equipos -->
+              <li><a href='team.html'>TEAMS</a></li>
+              <!-- Enlace a la página de clasificaciones -->
+              <li><a href='standings.html'>STANDINGS</a></li>
+          </ul>
+      </div>
+  </nav>
+    <div id="team-selector">
+      <label for="selector">Pick a team: </label>
+      <select name="selector" onchange="refresh(this.value)">
+        <option value="76ers">76ers</option>
+        <option value="Bobcats">Bobcats</option>
+        <option value="Bucks">Bucks</option>
+        <option value="Bulls">Bulls</option>
+        <option value="Cavaliers">Cavaliers</option>
+        <option value="Celtics">Celtics</option>
+        <option value="Clippers">Clippers</option>
+        <option value="Grizzlies">Grizzlies</option>
+        <option value="Hawks">Hawks</option>
+        <option value="Heat">Heat</option>
+        <option value="Hornets">Hornets</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Kings">Kings</option>
+        <option value="Knicks">Knicks</option>
+        <option value="Lakers" selected="">Lakers</option>
+        <option value="Magic">Magic</option>
+        <option value="Mavericks">Mavericks</option>
+        <option value="Nets">Nets</option>
+        <option value="Nuggets">Nuggets</option>
+        <option value="Pacers">Pacers</option>
+        <option value="Pistons">Pistons</option>
+        <option value="Raptors">Raptors</option>
+        <option value="Rockets">Rockets</option>
+        <option value="Spurs">Spurs</option>
+        <option value="Suns">Suns</option>
+        <option value="Supersonics">Supersonics</option>
+        <option value="Timberwolves">Timberwolves</option>
+        <option value="Trail Blazers">Trail Blazers</option>
+        <option value="Warriors">Warriors</option>
+        <option value="Wizards">Wizards</option>
+      </select>
+    </div>
+
+    <div id="team-frame">
+      <div id="team-cards">
+        <div id="team-row-1" class="team-row">
+          <div id="player-data-61" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2772.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Trevor Ariza</h3>
+                <div id="datos-basicos">
+                  <p>Position:F</p>
+                  <p>H:6-8</p>
+                  <p>W:210</p>
+                </div>
+                <h4>UCLA</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>6.5</p>
+                      <p>1.5</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>3.5</p>
+                      <p>0.3</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-62" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/977.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Kobe Bryant</h3>
+                <div id="datos-basicos">
+                  <p>Position:G</p>
+                  <p>H:6-6</p>
+                  <p>W:205</p>
+                </div>
+                <h4>Lower Merion HS (PA)</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>28.7</p>
+                      <p>5.4</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>6.4</p>
+                      <p>0.5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-63" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/101115.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Andrew Bynum</h3>
+                <div id="datos-basicos">
+                  <p>Position:C</p>
+                  <p>H:7-0</p>
+                  <p>W:285</p>
+                </div>
+                <h4>St. Joseph HS (NJ)</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>7.8</p>
+                      <p>1.1</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>5.9</p>
+                      <p>1.6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-64" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/200770.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Jordan Farmar</h3>
+                <div id="datos-basicos">
+                  <p>Position:G</p>
+                  <p>H:6-2</p>
+                  <p>W:180</p>
+                </div>
+                <h4>UCLA</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>9.1</p>
+                      <p>2.7</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>2.2</p>
+                      <p>0.1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="team-row-2" class="team-row">
+          <div id="player-data-65" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/965.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Derek Fisher</h3>
+                <div id="datos-basicos">
+                  <p>Position:PG</p>
+                  <p>H:6-1</p>
+                  <p>W:210</p>
+                </div>
+                <h4>Arkansas-Little Rock</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>11.7</p>
+                      <p>2.8</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>2.1</p>
+                      <p>0</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-66" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2200.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Pau Gasol</h3>
+                <div id="datos-basicos">
+                  <p>Position:F-C</p>
+                  <p>H:7-0</p>
+                  <p>W:250</p>
+                </div>
+                <h4>Spain</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>18.9</p>
+                      <p>3.7</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>7.9</p>
+                      <p>1.5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-67" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Didier Ilunga-Mbenga</h3>
+                <div id="datos-basicos">
+                  <p>Position:C</p>
+                  <p>H:7-0</p>
+                  <p>W:255</p>
+                </div>
+                <h4>Congo</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>1.9</p>
+                      <p>0.25</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>1.8</p>
+                      <p>0.6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-68" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/201207.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Coby Karl</h3>
+                <div id="datos-basicos">
+                  <p>Position:G</p>
+                  <p>H:6-5</p>
+                  <p>W:215</p>
+                </div>
+                <h4>Boise State</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>1.8</p>
+                      <p>0.5</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>0.8</p>
+                      <p>0.1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="team-row-3" class="team-row">
+          <div id="player-data-69" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2036.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Chris Mihm</h3>
+                <div id="datos-basicos">
+                  <p>Position:C</p>
+                  <p>H:7-0</p>
+                  <p>W:265</p>
+                </div>
+                <h4>Texas</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>3.6</p>
+                      <p>0.6</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>3.3</p>
+                      <p>0.6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-70" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/1956.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Ira Newble</h3>
+                <div id="datos-basicos">
+                  <p>Position:G-F</p>
+                  <p>H:6-7</p>
+                  <p>W:220</p>
+                </div>
+                <h4>Miami(Ohia)</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>4.3</p>
+                      <p>0.3</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>2.8</p>
+                      <p>0.2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-71" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/1885.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Lamar Odom</h3>
+                <div id="datos-basicos">
+                  <p>Position:F</p>
+                  <p>H:6-10</p>
+                  <p>W:230</p>
+                </div>
+                <h4>Rhode Island</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>14.2</p>
+                      <p>3.5</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>10.6</p>
+                      <p>0.9</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-72" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2209.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Vladimir Radmanovic</h3>
+                <div id="datos-basicos">
+                  <p>Position:F</p>
+                  <p>H:6-10</p>
+                  <p>W:235</p>
+                </div>
+                <h4>Serbia Montenegro</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>8.4</p>
+                      <p>1.9</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>3.3</p>
+                      <p>0.2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="team-row-4" class="team-row">
+          <div id="player-data-73" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/101142.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Ronny Turiaf</h3>
+                <div id="datos-basicos">
+                  <p>Position:F-C</p>
+                  <p>H:6-10</p>
+                  <p>W:250</p>
+                </div>
+                <h4>Gonzaga</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>6.6</p>
+                      <p>1.6</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>3.9</p>
+                      <p>1.4</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-74" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2756.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Sasha Vujacic</h3>
+                <div id="datos-basicos">
+                  <p>Position:G</p>
+                  <p>H:6-7</p>
+                  <p>W:205</p>
+                </div>
+                <h4>Slovenia</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>8.8</p>
+                      <p>1</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>2.1</p>
+                      <p>0.1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="player-data-75" class="flip-box player-data team-Lakers">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <object
+                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2575.png"
+                  type="image/png"
+                >
+                  <img src="img/fallback.png" />
+                </object>
+                <h3>Luke Walton</h3>
+                <div id="datos-basicos">
+                  <p>Position:F</p>
+                  <p>H:6-8</p>
+                  <p>W:235</p>
+                </div>
+                <h4>Arizona</h4>
+              </div>
+              <div class="flip-box-back">
+                <h2>Last Season</h2>
+                <div class="last-season-stats">
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Points</p>
+                      <p>Assists</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>7.2</p>
+                      <p>2.9</p>
+                    </div>
+                  </div>
+                  <div class="last-season-stats-row">
+                    <div class="last-season-stats-header">
+                      <p>Rebounds</p>
+                      <p>Blocks</p>
+                    </div>
+                    <div class="last-season-stats-data">
+                      <p>3.9</p>
+                      <p>0.2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="court">
+        <img
+          src="img/court.jpg"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        />
+        <div
+          id="posicion-1"
+          class="game-position"
+          onmouseover="onPlayerHover(this.id)"
+          onmouseout="onPlayerOut(this.id)"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <div class="pos-icon">
+            <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li id="court-65" onclick="onPlayerClick(this.id)">Derek Fisher</li>
+          </ul>
+        </div>
+        <div
+          id="posicion-2"
+          class="game-position"
+          onmouseover="onPlayerHover(this.id)"
+          onmouseout="onPlayerOut(this.id)"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <div class="pos-icon">
+            <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li id="court-62" onclick="onPlayerClick(this.id)">Kobe Bryant</li>
+            <li id="court-64" onclick="onPlayerClick(this.id)">
+              Jordan Farmar
+            </li>
+            <li id="court-68" onclick="onPlayerClick(this.id)">Coby Karl</li>
+            <li id="court-70" onclick="onPlayerClick(this.id)">Ira Newble</li>
+            <li id="court-74" onclick="onPlayerClick(this.id)">
+              Sasha Vujacic
+            </li>
+          </ul>
+        </div>
+        <div
+          id="posicion-3"
+          class="game-position"
+          onmouseover="onPlayerHover(this.id)"
+          onmouseout="onPlayerOut(this.id)"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <div class="pos-icon">
+            <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li id="court-61" onclick="onPlayerClick(this.id)">Trevor Ariza</li>
+            <li id="court-71" onclick="onPlayerClick(this.id)">Lamar Odom</li>
+            <li id="court-72" onclick="onPlayerClick(this.id)">
+              Vladimir Radmanovic
+            </li>
+            <li id="court-75" onclick="onPlayerClick(this.id)">Luke Walton</li>
+          </ul>
+        </div>
+        <div
+          id="posicion-4"
+          class="game-position"
+          onmouseover="onPlayerHover(this.id)"
+          onmouseout="onPlayerOut(this.id)"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <div class="pos-icon">
+            <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li id="court-66" onclick="onPlayerClick(this.id)">Pau Gasol</li>
+            <li id="court-73" onclick="onPlayerClick(this.id)">Ronny Turiaf</li>
+          </ul>
+        </div>
+        <div
+          id="posicion-5"
+          class="game-position"
+          onmouseover="onPlayerHover(this.id)"
+          onmouseout="onPlayerOut(this.id)"
+          draggable="true"
+          ondragstart="drag(event)"
+        >
+          <div class="pos-icon">
+            <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
+          </div>
+          <ul>
+            <li id="court-63" onclick="onPlayerClick(this.id)">Andrew Bynum</li>
+            <li id="court-67" onclick="onPlayerClick(this.id)">
+              Didier Ilunga-Mbenga
+            </li>
+            <li id="court-69" onclick="onPlayerClick(this.id)">Chris Mihm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie de página estándar con diseño consistente -->
+    <footer>
+      <p>&copy; 2025 NBA Stats. All rights reserved.</p>
+      <p>
+        <a href="#" style="margin-right: 15px">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </p>
+      <p>
+        Our goal is to provide comprehensive and up-to-date NBA statistics and
+        insights for basketball enthusiasts.
+      </p>
+    </footer>
+  </body>
+</html>
