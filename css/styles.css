@@ -37,6 +37,7 @@ header{
   width: 100%;
 }
 
+/* Estilo para el logotipo de la cabecera*/ 
 #header-logo{
   background-color: #000000;
   color: white;
@@ -45,8 +46,7 @@ header{
   align-items: center;
 }
 
-/* Style the links inside the navigation bar */
-
+/* Estilos de la barra de navegación */
 nav{
   display: flex;
 }
@@ -95,12 +95,14 @@ nav{
   color: black;
 }
 
+/* Media query para adaptar la sección de logos de los equipos al tamaño de la pantalla */
 @media screen and (max-width: 768px) {
   #team-row {
     flex-basis: 100%;
   }
 }
 
+/* Estilos para la sección de logos de los equipos */
 #all-teams {
   display: flex;
   flex-wrap: wrap;
@@ -161,6 +163,7 @@ nav{
   font-size: 18px;
 }
 
+/* Estilos para el pie de página */
 footer {
   text-align: center;
   padding: 10px;

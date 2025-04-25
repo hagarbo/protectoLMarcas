@@ -37,6 +37,7 @@
     width: 100%;
   }
   
+    /* Contenedor de la tarjeta de cada jugador */
   .flip-box {
     perspective: 1000px;
     width: 260px;
@@ -47,7 +48,6 @@
     overflow: hidden;
   }
   
-  /* This container is needed to position the front and back side */
   .flip-box-inner {
     position: relative;
     width: 100%;
@@ -56,12 +56,13 @@
     transform-style: preserve-3d;
   }
   
+  /* Transición de la tarjeta al poner encima el mouse */
   .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
     cursor: pointer;
   }
   
-  /* Position the front and back side */
+  /* Contenedores para la cara de la tarjeta y el reverso con las estadisticas */
   .flip-box-front, .flip-box-back {
     position: absolute; 
     width: 100%;
@@ -72,7 +73,6 @@
     text-shadow: dodgerblue;
   }
   
-  /* Style the back side */
   .flip-box-back {
     background-image: linear-gradient(to right, #CE1141, dodgerblue);
     transform: rotateY(180deg);
@@ -123,6 +123,7 @@
     text-align: center;
   }
   
+  /* Estilos para las estadisticas de los jugadores */
   #datos-basicos {
     display: flex;
     font-size: 15px;
@@ -141,60 +142,7 @@
     text-align: center;
   }
   
-  .tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  
-  .tablinks{
-    background-color: inherit;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 10px;
-    transition: 0.3s;
-    font-size: 14px;
-  }
-  
-  .tablinks.active{
-    background-color: #ccc;
-  }
-  
-  .tablinks:hover{
-    background-color: #ddd;
-  }
-  
-  .tabcontent {
-    display: none;
-    padding: 10px 30px 10px 30px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    font-size: 18px;
-    font-weight: 600;
-    border-top: none;
-    text-align: center;
-  }
-  
-  #player-stats {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  /* The sticky class is added to the header with JS when it reaches its scroll position */
-  .sticky {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-  }
-  
-  
-  
+/* La idea sería hacer un estilo específico con los colores de cada equipo, pero por ahora solo se hará para los Lakers */
   .team-Lakers {
     background-color:#552583;
     background-image: url('../img/Lakers.gif');
@@ -205,8 +153,7 @@
   }
   
   
-  
-  /* CSS para la cancha */
+  /* CSS para la cancha con la alineación */
   
   #court{ /* main container */
     position: relative;
