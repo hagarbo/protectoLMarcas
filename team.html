@@ -47,6 +47,8 @@
         </ul>
       </div>
     </nav>
+
+    <!-- Selector de los equipos -->
     <div id="team-selector">
       <label for="selector">Pick a team: </label>
       <select name="selector">
@@ -83,14 +85,24 @@
       </select>
     </div>
 
+    <!-- Contenido principal con las tarjetas de los jugadores de cada equipo -->
+    <!-- La estrucura es la siguiente:
+        + Un frame que engloba todo, el team-frame
+        + Un contenedor con las tarjetas de los jugadores(team-cards) que a su vez tiene:
+            + Un contenedor por cada fila de tarjetas(team-row-numero) 
+            + Dentro de cada contenedor de fila esta la caja para la tarjeta(player-data-id) -->
     <div id="team-frame">
       <div id="team-cards">
         <div id="team-row-1" class="team-row">
           <div id="player-data-61" class="flip-box player-data team-Lakers">
+            <!-- Para cada tarjeta de jugador tenemos:
+                  + flip-box-inner, el contenedor que engloba toda la informacion del jugador
+                  + flip-box-front, la cara de la tarjeta con la foto del jugador 
+                  + flip-box-back, el reverso de la tarjeta con las estadisticas -->
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2772.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2426.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -134,7 +146,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/977.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/110.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -178,7 +190,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/101115.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2748.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -222,7 +234,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/200770.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3002.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -268,7 +280,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/965.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/246.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -312,7 +324,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2200.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/996.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -356,7 +368,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2450.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -400,7 +412,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/201207.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3251.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -534,7 +546,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/1885.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/617.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -578,7 +590,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2209.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1016.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -624,7 +636,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/101142.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2789.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -668,7 +680,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2756.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2421.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -712,7 +724,7 @@
             <div class="flip-box-inner">
               <div class="flip-box-front">
                 <object
-                  data="https://cdn.nba.com/headshots/nba/latest/260x190/2575.png"
+                  data="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/2027.png"
                   type="image/png"
                 >
                   <img src="img/fallback.png" />
@@ -754,6 +766,9 @@
           </div>
         </div>
       </div>
+
+      <!-- Zona de la alineación del equipo donde aparece la cancha con el nombre de los jugadores -->
+      <!-- La alineacion es editable con javascript -->
       <div id="court">
         <img
           src="img/court.jpg"
@@ -772,7 +787,9 @@
             <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
           </div>
           <ul>
-            <li id="court-65" onclick="onPlayerClick(this.id)">Derek Fisher</li>
+            <li id="court-65" onclick="onPlayerClick(this.id)">
+              Derek Fisher
+            </li>
           </ul>
         </div>
         <div
@@ -787,12 +804,18 @@
             <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
           </div>
           <ul>
-            <li id="court-62" onclick="onPlayerClick(this.id)">Kobe Bryant</li>
+            <li id="court-62" onclick="onPlayerClick(this.id)">
+              Kobe Bryant
+            </li>
             <li id="court-64" onclick="onPlayerClick(this.id)">
               Jordan Farmar
             </li>
-            <li id="court-68" onclick="onPlayerClick(this.id)">Coby Karl</li>
-            <li id="court-70" onclick="onPlayerClick(this.id)">Ira Newble</li>
+            <li id="court-68" onclick="onPlayerClick(this.id)">
+              Coby Karl
+            </li>
+            <li id="court-70" onclick="onPlayerClick(this.id)">
+              Ira Newble
+            </li>
             <li id="court-74" onclick="onPlayerClick(this.id)">
               Sasha Vujacic
             </li>
@@ -810,12 +833,18 @@
             <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
           </div>
           <ul>
-            <li id="court-61" onclick="onPlayerClick(this.id)">Trevor Ariza</li>
-            <li id="court-71" onclick="onPlayerClick(this.id)">Lamar Odom</li>
+            <li id="court-61" onclick="onPlayerClick(this.id)">
+              Trevor Ariza
+            </li>
+            <li id="court-71" onclick="onPlayerClick(this.id)">
+              Lamar Odom
+            </li>
             <li id="court-72" onclick="onPlayerClick(this.id)">
               Vladimir Radmanovic
             </li>
-            <li id="court-75" onclick="onPlayerClick(this.id)">Luke Walton</li>
+            <li id="court-75" onclick="onPlayerClick(this.id)">
+              Luke Walton
+            </li>
           </ul>
         </div>
         <div
@@ -830,8 +859,12 @@
             <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
           </div>
           <ul>
-            <li id="court-66" onclick="onPlayerClick(this.id)">Pau Gasol</li>
-            <li id="court-73" onclick="onPlayerClick(this.id)">Ronny Turiaf</li>
+            <li id="court-66" onclick="onPlayerClick(this.id)">
+              Pau Gasol
+            </li>
+            <li id="court-73" onclick="onPlayerClick(this.id)">
+              Ronny Turiaf
+            </li>
           </ul>
         </div>
         <div
@@ -846,11 +879,15 @@
             <i class="fa-solid fa-user fa-2xl" aria-hidden="true"></i>
           </div>
           <ul>
-            <li id="court-63" onclick="onPlayerClick(this.id)">Andrew Bynum</li>
+            <li id="court-63" onclick="onPlayerClick(this.id)">
+              Andrew Bynum
+            </li>
             <li id="court-67" onclick="onPlayerClick(this.id)">
               Didier Ilunga-Mbenga
             </li>
-            <li id="court-69" onclick="onPlayerClick(this.id)">Chris Mihm</li>
+            <li id="court-69" onclick="onPlayerClick(this.id)">
+              Chris Mihm
+            </li>
           </ul>
         </div>
       </div>

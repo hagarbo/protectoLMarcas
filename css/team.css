@@ -153,80 +153,82 @@
   }
   
   
-  /* CSS para la cancha con la alineación */
-  
-  #court{ /* main container */
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  #court img{
-    width: 100%;
-    margin: auto;
-  }
-  
-  .game-position ul li:nth-child(n+2){
-    display: none;
-  }
-  
-  .game-position ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .game-position .showlist{
-    background-color: dodgerblue;
-    padding: 3px;
-  }
-  
-  .game-position .showlist li{
-    display: block !important;
-  }
-  
-  .game-position .showlist li:hover{
-    background-color: #04AA6D;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .game-position .pos-icon{
-    width: 100%;
-  }
-  
-  .pos-icon i{
-    margin-left: 40%;
-  }
-  
-  #posicion-1,#posicion-2,#posicion-3,#posicion-4,#posicion-5{
-    position: absolute;
-    font-size: 12px;
-    cursor: move;
-  }
-  
-  #posicion-1{
-    top: 37%;
-    left: 30%;
-  }
-  
-  #posicion-2{
-    top: 60%;
-    left: 27%;
-  }
-  
-  #posicion-3{
-    top: 21%;
-    left: 15%;
-  }
-  
-  #posicion-4{
-    top: 70%;
-    left: 10%;
-  }
-  
-  #posicion-5{
-    top: 45%;
-    left: 6%;
-  }
+/* CSS para la cancha con la alineación */
+
+#court{ /* main container */
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#court img{
+  width: 100%;
+  margin: auto;
+}
+
+.game-position ul li:nth-child(n+2){
+  display: none;
+}
+
+.game-position ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.game-position .showlist{
+  background-color: dodgerblue;
+  padding: 3px;
+}
+
+.game-position .showlist li{
+  display: block !important;
+}
+
+.game-position .showlist li:hover{
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+.game-position .pos-icon{
+  width: 100%;
+}
+
+.pos-icon i{
+  margin-left: 40%;
+}
+
+/* Posiciones de los jugadores en la cancha */
+
+#posicion-1,#posicion-2,#posicion-3,#posicion-4,#posicion-5{
+  position: absolute;
+  font-size: 12px;
+  cursor: move;
+}
+
+#posicion-1{
+  top: 37%;
+  left: 30%;
+}
+
+#posicion-2{
+  top: 60%;
+  left: 27%;
+}
+
+#posicion-3{
+  top: 21%;
+  left: 15%;
+}
+
+#posicion-4{
+  top: 70%;
+  left: 10%;
+}
+
+#posicion-5{
+  top: 45%;
+  left: 6%;
+}

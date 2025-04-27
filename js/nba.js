@@ -9,24 +9,23 @@ function changeTab(e) {
 }
 
 function onPlayerHover(elementId) {
-	console.log(elementId);
-	console.log(document.getElementById(elementId).firstChild);
 	document.getElementById(elementId).querySelector(".fa-user").classList.add("fa-beat-fade");
-	document.getElementById(elementId).childNodes[1].classList.add("showlist");
+	document.getElementById(elementId).querySelector("ul").classList.add("showlist");
 }
 
 function onPlayerOut(elementId) {
-	document.getElementById(elementId).firstChild.firstChild.classList.remove( "fa-beat-fade");
-	document.getElementById(elementId).childNodes[1].classList.remove("showlist");
+	document.getElementById(elementId).querySelector(".fa-user").classList.remove( "fa-beat-fade");
+	document.getElementById(elementId).querySelector("ul").classList.remove("showlist");
 }
 
 function onPlayerClick(elementId) {
-	for (i = 0; i < document.getElementById(elementId).parentNode.childElementCount; i++){
-		document.getElementById(elementId).parentNode.childNodes[i].style.display = "none";
+	players = document.getElementById(elementId).parentNode.querySelectorAll("li");
+	for (i = 0; i < players.length; i++){
+		players[i].style.display = "none";
 	}
 	document.getElementById(elementId).style.display = "block";
-	document.getElementById(elementId).parentNode.parentNode.firstChild.firstChild.classList.remove("fa-beat-fade");
-	document.getElementById(elementId).parentNode.classList.remove( "showlist");
+	document.getElementById(elementId).parentNode.parentNode.querySelector(".fa-user").classList.remove( "fa-beat-fade");
+	document.getElementById(elementId).parentNode.classList.remove("showlist");
 }
 
 function allowDrop(ev) {
